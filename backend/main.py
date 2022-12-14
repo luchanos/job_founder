@@ -1,3 +1,4 @@
+import uvicorn
 from apis.base import api_router
 from core.config import settings
 from db.base import Base
@@ -28,3 +29,7 @@ def start_application():
 
 
 app = start_application()
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="localhost", port=8000)
